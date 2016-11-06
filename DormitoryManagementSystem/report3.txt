@@ -1,0 +1,18 @@
+Completed Tasks:
+
+I was able to solve previously stated road blocks with the help of given solutions. 
+
+I was able to create different types of associations.
+
+Exercise 03.1 Associations  : It took me about one and half hours .
+    a) Bidirectional OneToMany: 15 minutes.
+    b) Optional Unidirectional ManyToOne : 10 minutes
+    c) Bidirectional ManyToMany: 15 minutes
+    d) Unidirectional OneToMany: 10 minutes
+    e) Unidirectional ManyToOne: 10 minutes
+    f) Bidirectional ManyToOne: 15 minutes
+
+
+Road Blocks:
+
+   No road blocks in this exercise.
