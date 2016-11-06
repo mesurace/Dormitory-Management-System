@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.RAController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-font-weight: bold;" text="Notice / Events">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="111.0">
+                     <children>
+                        <Separator layoutY="15.0" prefHeight="2.0" prefWidth="700.0" />
+                        <Separator layoutX="-1.0" layoutY="66.0" prefHeight="1.0" prefWidth="700.0" />
+                        <Label layoutX="259.0" layoutY="26.0" text="Add notice to students">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="5.0" layoutY="211.0" prefHeight="3.0" prefWidth="691.0" />
+                        <Separator layoutX="-3.0" layoutY="260.0" prefHeight="4.0" prefWidth="700.0" />
+                        <Label layoutX="69.0" layoutY="95.0" text="Notice">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="75.0" layoutY="130.0" text="Date" />
+                        <TextField fx:id="txtNotice" layoutX="134.0" layoutY="92.0" />
+                        <DatePicker fx:id="dtNoticeDate" layoutX="133.0" layoutY="126.0" />
+                        <Button fx:id="btnSaveNotice" layoutX="133.0" layoutY="166.0" mnemonicParsing="false" onAction="#SaveNotice" prefWidth="80.0" text="Save" />
+                        <Button fx:id="btnCancelNotice" layoutX="243.0" layoutY="166.0" mnemonicParsing="false" onAction="#ClearNoticeForm" prefWidth="80.0" text="Cancel" />
+                        <Label layoutX="289.0" layoutY="222.0" text="View all notices">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblNotice" layoutX="4.0" layoutY="264.0" prefHeight="200.0" prefWidth="693.0">
+                          <columns>
+                            <!-- <TableColumn fx:id="NoticeIdColumn" prefWidth="64.0" text="Notice Id" /> -->
+                            <TableColumn fx:id="BuildingNumberColumn" prefWidth="64.0" text="Building Number" />
+                                 <TableColumn fx:id="NoticeDateColumn" minWidth="7.0" prefWidth="64.0" text="Notice Date" />
+                            <TableColumn fx:id="NoticeColumn" minWidth="7.0" prefWidth="401.0" text="Notice" />
+                       
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TextField fx:id="txtNoticeId" layoutX="351.0" layoutY="92.0" prefHeight="0.0" prefWidth="0.0" />
+                        <Button fx:id="btnDeleteNotice" layoutX="337.0" layoutY="599.0" mnemonicParsing="false" onAction="#DeleteSelectedNotice" prefHeight="25.0" prefWidth="80.0" text="Delete" />
+                        <Separator layoutX="7.0" layoutY="481.0" prefHeight="0.0" prefWidth="691.0" />
+                        <Separator layoutX="7.0" layoutY="525.0" prefHeight="10.0" prefWidth="692.0" />
+                        <Label layoutX="311.0" layoutY="491.0" text="Delete Notice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="213.0" layoutY="553.0" text="Select Notice">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbNotice" layoutX="337.0" layoutY="550.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-font-weight: bold;" text="Complains">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutY="16.0" prefHeight="0.0" prefWidth="700.0" />
+                        <Separator layoutX="7.0" layoutY="71.0" prefHeight="0.0" prefWidth="692.0" />
+                        <Label layoutX="268.0" layoutY="31.0" text="View all complains">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblComplain" layoutX="6.0" layoutY="81.0" prefHeight="584.0" prefWidth="690.0">
+                          <columns>
+                            <TableColumn fx:id="ComplainIdColumn" prefWidth="75.0" text="Complain Id" />
+                            <TableColumn fx:id="StudentIdColumn" prefWidth="75.0" text="StudentId" />
+                            <TableColumn fx:id="ComplainDateColumn" prefWidth="75.0" text="Complain Date" />
+                            <TableColumn fx:id="ComplainColumn" prefWidth="75.0" text="Complain" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-font-weight: bold;" text="Room Status">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblUnOccupied" layoutY="77.0" prefHeight="197.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="unOccupiedDormIdColumn" prefWidth="75.0" text="S.N." />
+                            <TableColumn fx:id="unOccupiedDormNumberColumn" prefWidth="75.0" text="Building Number" />
+                            <TableColumn fx:id="unOccupiedRoomNumberColumn" prefWidth="75.0" text="Room Number" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Separator layoutX="4.0" layoutY="13.0" prefHeight="0.0" prefWidth="692.0" />
+                        <Separator layoutX="4.0" layoutY="61.0" prefHeight="16.0" prefWidth="700.0" />
+                        <Label layoutX="254.0" layoutY="25.0" text="View available room ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="4.0" layoutY="281.0" prefHeight="0.0" prefWidth="700.0" />
+                        <Separator layoutX="4.0" layoutY="331.0" prefHeight="9.0" prefWidth="700.0" />
+                        <Label layoutX="271.0" layoutY="296.0" text="Occupied rooms">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblOccupied" layoutY="354.0" prefHeight="315.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="occupiedDormIdColumn" prefWidth="75.0" text="S.N." />
+                            <TableColumn fx:id="occupiedDormNumberColumn" prefWidth="75.0" text="Building Number" />
+                            <TableColumn fx:id="occupiedRoomNumberColumn" prefWidth="75.0" text="Room Number" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-font-weight: bold;" text="Student Registration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="262.0" layoutY="34.0" text="Students Registration ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="3.0" layoutY="23.0" prefHeight="5.0" prefWidth="700.0" />
+                        <Separator layoutX="3.0" layoutY="74.0" prefHeight="0.0" prefWidth="700.0" />
+                        <GridPane layoutX="32.0" layoutY="85.0" prefHeight="381.0" prefWidth="296.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="93.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="606.0" minWidth="10.0" prefWidth="198.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="74.0" text="FirstName" />
+                              <Label text="LastName" GridPane.rowIndex="1" />
+                              <Label text="Student Id" GridPane.rowIndex="2" />
+                              <Label text="Email" GridPane.rowIndex="3" />
+                              <Label text="Intake" GridPane.rowIndex="4" />
+                              <Label text="Country" GridPane.rowIndex="5" />
+                              <Label prefHeight="17.0" prefWidth="89.0" text="Building Num." GridPane.rowIndex="7" />
+                              <Label text="Room Num." GridPane.rowIndex="8" />
+                              <Label text="Arival Date" GridPane.rowIndex="9" />
+                              <Label text="Departure Date" GridPane.rowIndex="10" />
+                              <Label text="UserName" GridPane.rowIndex="11" />
+                              <Label text="Password" GridPane.rowIndex="12" />
+                              <TextField fx:id="txtFirstName" prefHeight="0.0" prefWidth="514.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtStudentId" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtCountry" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="txtUserName" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <DatePicker fx:id="dtDepartureDate" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <DatePicker fx:id="dtArrivalDate" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <ComboBox fx:id="cmbRoomNumber" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <ComboBox fx:id="cmbIntake" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button fx:id="btnSaveStudent" mnemonicParsing="false" onAction="#SaveStudent" prefWidth="80.0" text="Save" GridPane.rowIndex="13" />
+                              <Button fx:id="btnClearStudent" mnemonicParsing="false" onAction="#ClearStudentAction" prefWidth="80.0" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                              <TextField fx:id="txtVisaStatus" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label text="Visa Status" GridPane.rowIndex="6" />
+                              <PasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                              <Label fx:id="lblBuildingNumber" style="-fx-font-weight: bold;" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <Separator layoutX="3.0" layoutY="476.0" prefHeight="0.0" prefWidth="700.0" />
+                        <Separator layoutX="7.0" layoutY="529.0" prefWidth="693.0" />
+                        <Label layoutX="300.0" layoutY="489.0" text="Delete Students">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="152.0" layoutY="552.0" text="Select Student">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbStudentIds" layoutX="289.0" layoutY="549.0" prefWidth="150.0" />
+                        <Button fx:id="btnDeleteStudent" layoutX="289.0" layoutY="599.0" mnemonicParsing="false" onAction="#DeleteStudent" prefWidth="80.0" text="Delete" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-font-weight: bold;" text="Student Details">
+					<content>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<Label layoutX="262.0" layoutY="34.0" text="View Running Students' Details ">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+								<Separator layoutX="3.0" layoutY="23.0" prefHeight="5.0" prefWidth="700.0" />
+								<Separator layoutX="3.0" layoutY="74.0" prefHeight="0.0" prefWidth="700.0" />
+                        <TableView fx:id="tblStudentDetail" layoutY="87.0" prefHeight="581.0" prefWidth="700.0">
+                         
+                            <columns>
+                            <TableColumn fx:id="StudentIdCol" prefWidth="75.0" text="Student ID" />
+                            <TableColumn fx:id="FirstNameCol" prefWidth="75.0" text="First Name" />
+                            <TableColumn fx:id="LastNameCol" prefWidth="75.0" text="Last Name" />
+                            <TableColumn fx:id="IntakeCol" prefWidth="75.0" text="Intake" />
+                            <TableColumn fx:id="CountryCol" prefWidth="75.0" text="Country" />
+                            <TableColumn fx:id="BuildingNumberCol" prefWidth="75.0" text="Building" />
+                            <TableColumn fx:id="RoomNumberCol" prefWidth="75.0" text="Room Num.." />
+                            <TableColumn fx:id="ArrivalDateCol" prefWidth="75.0" text="Arival Date" />
+                            <TableColumn fx:id="DepartureDateCol" prefWidth="96.0" text="departure Date" />
+                          </columns>
+                         
+                        </TableView>
+								
+							
+								
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+          
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>

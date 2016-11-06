@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.StudentController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="506.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Notices/Events">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="494.0">
+                     <children>
+                        <TableView fx:id="tblNotice" layoutX="6.0" layoutY="14.0" prefHeight="354.0" prefWidth="490.0">
+                          <columns>
+                            <TableColumn fx:id="NoticeDateColumn" prefWidth="113.0" text="Date" />
+                            <TableColumn fx:id="NoticeColumn" minWidth="0.0" prefWidth="376.0" text="Notices/Events" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Profile">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="53.0" layoutY="48.0" prefHeight="17.0" prefWidth="44.0" text="Name :" />
+                        <Label layoutX="53.0" layoutY="86.0" prefHeight="17.0" prefWidth="48.0" text="Email :" />
+                        <Label layoutX="53.0" layoutY="124.0" prefWidth="64.0" text="Country :" />
+                        <Label layoutX="53.0" layoutY="161.0" prefWidth="50.0" text="Entry :" />
+                        <Label fx:id="name" layoutX="128.0" layoutY="48.0" text="xyz" />
+                        <Label fx:id="email" layoutX="129.0" layoutY="86.0" prefHeight="17.0" prefWidth="176.0" text="xyz@" />
+                        <Label fx:id="country" layoutX="128.0" layoutY="125.0" prefHeight="17.0" prefWidth="218.0" text="Nepal" />
+                        <Label fx:id="entry" layoutX="129.0" layoutY="161.0" prefHeight="17.0" prefWidth="140.0" text="Spring" />
+                        <Label layoutX="53.0" layoutY="198.0" text="Building :" />
+                        <Label layoutX="53.0" layoutY="233.0" text="Room :" />
+                        <Label fx:id="building" layoutX="128.0" layoutY="198.0" text="141" />
+                        <Label fx:id="room" layoutX="128.0" layoutY="233.0" text="313" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add Complains">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="500.0">
+                     <children>
+                        <Label layoutX="19.0" layoutY="33.0" text="Complain :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="complain" layoutX="103.0" layoutY="33.0" prefHeight="68.0" prefWidth="382.0" />
+                        <Button layoutX="405.0" layoutY="115.0" mnemonicParsing="false" onAction="#onComplainSendAction" prefWidth="80.0" text="Send" />
+                        <TableView fx:id="tblStudentComplain" layoutX="19.0" layoutY="220.0" prefHeight="133.0" prefWidth="467.0">
+                          <columns>
+                            <TableColumn fx:id="ComplainDateColumn" prefWidth="132.0" text="Date" />
+                            <TableColumn fx:id="ComplainColumn" prefWidth="333.0" text="Complains" />
+                          </columns>
+                        </TableView>
+                        <Separator layoutX="7.0" layoutY="156.0" prefHeight="1.0" prefWidth="486.0" />
+                        <Separator layoutX="10.0" layoutY="204.0" prefHeight="3.0" prefWidth="487.0" />
+                        <Label layoutX="158.0" layoutY="172.0" text="View My Complains">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>
