@@ -31,12 +31,12 @@ FEATURES:
 
 TECHNOLOGIES :
 
-• Java SE 8
+      • Java SE 8
 
-• Java FX, FXML
+      • Java FX, FXML
 
-• MySQL Database
+      • MySQL Database
 
-• Scene Builder
+      • Scene Builder
 
-• Eclipse Mars IDE
+      • Eclipse Mars IDE
