@@ -31,7 +31,7 @@ FEATURES:
 
 TECHNOLOGIES :
 
-      • Java SE 8
+      • Java SE 8, MVC
 
       • Java FX, FXML
 
