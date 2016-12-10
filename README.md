@@ -10,8 +10,9 @@ It is a desktop based application for University Dormitory to keep track of the 
 FEATURES:
 
 • Only authorized personal can access the system with secure login and password.
+      
       ⁃ Admin
-      ⁃ RA
+      ⁃ Residental Advisor(RA)
       ⁃ Student
 
 • UI features of dashboard can be accordance with authorization level.
