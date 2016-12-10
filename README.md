@@ -2,8 +2,6 @@
 
 PROJECT TITLE: Dormitory management system
 
-PROJECT DATES: 2016 October
-
 PROJECT DESCRIPTION: 
 
 *It is a desktop based application for University Dormitory to keep track of the resident , facilities and activities with in the dormitory. 
