@@ -4,9 +4,7 @@ PROJECT TITLE: Dormitory management system
 
 PROJECT DESCRIPTION: 
 
-*It is a desktop based application for University Dormitory to keep track of the resident , facilities and activities with in the dormitory. 
-*Created backend database functionality ,with MySQL for the database
-*Created in Java, Java FX UI, with business logic and data repository
+It is a desktop based application for University Dormitory to keep track of the resident , facilities and activities with in the dormitory. This project is based on MVC design pattern.
 
 
 FEATURES:
@@ -34,7 +32,7 @@ TECHNOLOGIES :
 
 • Java SE 8
 
-• Java FXML
+• Java FX, FXML
 
 • MySQL Database
 
