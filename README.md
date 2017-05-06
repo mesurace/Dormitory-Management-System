@@ -1,9 +1,5 @@
 # Dormitory-Management-System
 
-PROJECT TITLE: Dormitory management system
-
-PROJECT DESCRIPTION: 
-
 It is a desktop based application for University Dormitory to keep track of the resident , facilities and activities with in the dormitory. This project is based on MVC design pattern.
 
 
